@@ -19,7 +19,7 @@ const currentPath = window.location.pathname.toLowerCase();
       navigationLinks[i].classList.remove("active");
     }
   }
-}
+
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 

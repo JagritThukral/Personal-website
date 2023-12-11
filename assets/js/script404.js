@@ -182,7 +182,7 @@ function navigateTo(targetPage) {
         window.scrollTo(0, 0);
 
         // Change the URL using the History API
-      //  history.pushState(null, null, `/${targetPage}`);
+       history.pushState(null, null, `/${targetPage}`);
 
         // Update meta tags
         updateMetaTags(pages[i].dataset.title, pages[i].dataset.description);

@@ -52,12 +52,8 @@
   // Loop through navigation links to find the 
     for (let i = 0; i < pages.length; i++) {
       const pagePath = `/${pages[i].dataset.page}`;
-
-      if (currentPath === '/' && pagePath === '/') {
-      // Handle home page separately
-      pages[i].classList.add("active");
-      navigationLinks[i].classList.add("active");
-    } else if (currentPath.startsWith(pagePath)) {
+ if (pagePath !== '/'){
+      if (currentPath.startsWith(pagePath)) {
       // Add 'active' class to the selected page
       pages[i].classList.add("active");
       navigationLinks[i].classList.add("active");
@@ -66,6 +62,12 @@
       pages[i].classList.remove("active");
       navigationLinks[i].classList.remove("active");
     }
+ } else {
+   
+   
+      pages[i].classList.add("active");
+      navigationLinks[i].classList.add("active");
+ }
     }
   
 });

@@ -1,26 +1,5 @@
 'use strict';
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
 
-
-const currentPath = window.location.pathname.toLowerCase();
-  
-  // Loop through navigation links to find the matching one
-if (currentPath !== '/'){
-for (let i = 0; i < pages.length; i++) {
-    const pagePath = `/${pages[i].dataset.page}`;
-    
-    if (currentPath.startsWith(pagePath)) {
-      // Add 'active' class to the selected page
-      pages[i].classList.add("active");
-      navigationLinks[i].classList.add("active");
-    } else {
-      // Remove 'active' class from other pages
-      pages[i].classList.remove("active");
-      navigationLinks[i].classList.remove("active");
-    }
-  }
-}
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 

@@ -146,7 +146,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     // Loop through pages to find the matching one
     for (let i = 0; i < pages.length; i++) {
-      if (targetPage === 'about') {
+      if (targetPage === 'about' && `/${pages[i].dataset.page}` === `/`) {
         // Handle the 'about' page separately
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");

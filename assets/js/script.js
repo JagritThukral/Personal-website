@@ -174,7 +174,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
         window.scrollTo(0, 0);
 
         // Change the URL using the History API
-        history.pushState(null, null, `/${(targetPage === 'about' ) ? '' : targetPage }`);
+        history.pushState(null, 'Jagrit Thukral - ' + targetPage, `/${(targetPage === 'about' ) ? '' : targetPage }`);
       } else {
         // Remove 'active' class from other pages
         pages[i].classList.remove("active");

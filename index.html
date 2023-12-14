@@ -43,6 +43,26 @@
       } catch (e) {
         alert(e)
       }
+      document.addEventListener("DOMContentLoaded", function() {
+  var navigationLinks = document.querySelectorAll("[data-nav-link]");
+  var pages = document.querySelectorAll("[data-page]");
+
+  const currentPath = window.location.pathname.toLowerCase();
+
+  // Loop through navigation links to find the matching one
+  if (currentPath !== '/') {
+    for (let i = 0; i < pages.length; i++) {
+      const pagePath = `/${pages[i].dataset.page}`;
+
+      if (currentPath.startsWith(pagePath)) {
+        // Add 'active' class to the selected page
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+      } 
+    }
+  }
+});
+
     </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -216,7 +236,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about " data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>

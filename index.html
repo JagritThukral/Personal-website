@@ -52,7 +52,7 @@
   // Loop through navigation links to find the 
     for (let i = 0; i < pages.length; i++) {
       const pagePath = `/${pages[i].dataset.page}`;
- if (pagePath !== '/'){
+ if (pagePath !== '/' && currentPath !== '/'){
       if (currentPath.startsWith(pagePath)) {
       // Add 'active' class to the selected page
       pages[i].classList.add("active");

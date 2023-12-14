@@ -160,6 +160,7 @@ for (let i = 0; i < formInputs.length; i++) {
 // Add event to all nav links
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+    event.preventDefault()
     let targetPage = this.innerHTML.toLowerCase();
 
     // Loop through pages to find the matching one

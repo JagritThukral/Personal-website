@@ -146,6 +146,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     // Loop through pages to find the matching one
     for (let i = 0; i < pages.length; i++) {
+     if (pagePath !== '/' && currentPath !== '/') {
+
       if (targetPage === pages[i].dataset.page) {
         // Add 'active' class to the selected page
         pages[i].classList.add("active");
@@ -155,12 +157,19 @@ for (let i = 0; i < navigationLinks.length; i++) {
         window.scrollTo(0, 0);
 
         // Change the URL using the History API
-        history.pushState(null, 'Jagrit Thukral - ' + targetPage, `/${(targetPage === 'about' ) ? '' : targetPage }`);
+        history.pushState(null, 'Jagrit Thukral - ' + targetPage, `/${targetPage}`);
       } else {
         // Remove 'active' class from other pages
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
+     }  else if (pagePath === '/' && currentPath === '/') {
+      // Handle the home page separately
+      pages[i].classList.add("active");
+      navigationLinks[i].classList.add("active");
+       history.pushState(null, 'Jagrit Thukral - About', `/`);
+    
+    }
     }
   });
 }

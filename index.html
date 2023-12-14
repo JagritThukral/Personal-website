@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="I am Jagrit Thukral , a software and fullstack developer from India ">
   <title>Jagrit Thukral - About</title>
 
   <!--
@@ -56,6 +57,7 @@
     if (pagePath !== '/' && currentPath !== '/') {
       if (currentPath.startsWith(pagePath)) {
         // Add 'active' class to the selected page
+        window.title = `Jagrit Thukral - ${pagePath}`
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
       } else {

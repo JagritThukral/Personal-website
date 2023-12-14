@@ -31,7 +31,7 @@
       // When the single page app is loaded further down in this file,
       // the correct url will be waiting in the browser's history for
       // the single page app to route  
-      try {
+      
       (function (l) {
   if (l.search[1] === '/') {
     var decoded = decodeURIComponent(l.search.slice(1).replace(/~and~/g, '&'));
@@ -40,12 +40,11 @@
     );
   }
 }(window.location));
-      } catch (e) {
-        alert(e)
-      }
+   
+      
       document.addEventListener("DOMContentLoaded", function() {
-  var navigationLinks = document.querySelectorAll("[data-nav-link]");
-  var pages = document.querySelectorAll("[data-page]");
+  const navigationLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("[data-page]");
 
   const currentPath = window.location.pathname.toLowerCase();
 

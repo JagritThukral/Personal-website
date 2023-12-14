@@ -50,7 +50,7 @@
   const currentPath = window.location.pathname.toLowerCase();
 
   // Loop through navigation links to find the matching one
-  if (currentPath !== '/') {
+ // if (currentPath !== '/') {
     for (let i = 0; i < pages.length; i++) {
       const pagePath = `/${pages[i].dataset.page}`;
 
@@ -60,7 +60,7 @@
         navigationLinks[i].classList.add("active");
       } 
     }
-  }
+//  }
 });
 
     </script>
@@ -211,7 +211,7 @@
 <nav class="navbar">
   <ul class="navbar-list">
     <li class="navbar-item">
-      <a href="/" class="navbar-link active" data-nav-link>About</a>
+      <a href="/" class="navbar-link " data-nav-link>About</a>
     </li>
     <li class="navbar-item">
       <a href="/resume" class="navbar-link" data-nav-link>Resume</a>
@@ -236,7 +236,7 @@
         - #ABOUT
       -->
 
-      <article class="about " data-page="about">
+      <article class="about " data-page="">
 
         <header>
           <h2 class="h2 article-title">About me</h2>

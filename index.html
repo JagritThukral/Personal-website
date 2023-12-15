@@ -39,7 +39,9 @@
   }
 
   // Update meta tags
+     if (title) {
   document.title = title;
+     }
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
     if (description){

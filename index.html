@@ -33,7 +33,7 @@
       
       break;
     case '/contact':
-      title += 'Contact Us';
+      title += 'Contact';
       description = 'Get in touch with us.';
       break;    
   }
@@ -63,7 +63,7 @@ updateMetaTags(currentPath)
     if (pagePath !== '/' && currentPath !== '/') {
       if (currentPath.startsWith(pagePath)) {
         // Add 'active' class to the selected page
-        document.title = `Jagrit Thukral - ${pagePath}`
+      //  document.title = `Jagrit Thukral - ${pagePath}`
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
       } else {

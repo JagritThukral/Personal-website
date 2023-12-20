@@ -38,12 +38,27 @@
   switch (route) {
     case '/':
       title += 'About';
+    break;
       
-      break;
     case '/contact':
       title += 'Contact';
-      description = 'Get in touch with us.';
-      break;    
+      description = 'Get in touch with Jagrit thukral. Reach out for inquiries, hiring, collaborations, or any tech-related discussions. ';  
+    break;    
+
+    case '/portfolio':
+      title += 'Portfolio'
+      description = "Explore Jagrit Thukral's diverse portfolio, showcasing expertise in web development, applications, and web design through various engaging projects"
+    break;
+
+    case '/resume'
+      title += 'Resume'
+      description = "Explore Jagrit Thukral's professional journey as a Software Developer, showcasing experience and skills"
+    break;
+
+    case '/blog'
+      title += 'Blog'
+      description = "Explore Jagrit Thukral's blog space, delving into a rich collection of his thoughts, insightful opinions, and reflections on various topics"
+    break;
   }
 
   // Update meta tags

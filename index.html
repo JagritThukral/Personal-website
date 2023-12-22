@@ -29,7 +29,24 @@
     - google font link
   -->
     <script type="text/javascript">
-  
+  // Check if the current URL is HTTPS and doesn't contain 'www'
+function isHttpsAndNoWww(url) {
+  return url.startsWith('https://') && !url.includes('www.');
+}
+
+// Get the current URL
+const currentUrl = window.location.href;
+
+// Check and set the canonical link tag if the conditions are met
+if (isHttpsAndNoWww(currentUrl)) {
+  const canonicalLink = document.createElement('link');
+  canonicalLink.setAttribute('rel', 'canonical');
+  canonicalLink.setAttribute('href', currentUrl);
+
+  // Add the canonical link tag to the head section of the HTML
+  document.head.appendChild(canonicalLink);
+}
+
    function updateMetaTags(route) {
   let title = 'Jagrit Thukral - '
     let description;
@@ -253,7 +270,7 @@ updateMetaTags(currentPath)
 <nav class="navbar">
   <ul class="navbar-list">
     <li class="navbar-item">
-      <a href="/" class="navbar-link " data-nav-link>About</a>
+      <a rel="can" href="/" class="navbar-link " data-nav-link>About</a>
     </li>
     <li class="navbar-item">
       <a href="/resume" class="navbar-link" data-nav-link>Resume</a>

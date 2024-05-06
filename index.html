@@ -1,188 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I'm Jagrit Thukral, a versatile Software Developer based in India, specializing in web development, backend programming, and app development."
+    />
+    <title>Jagrit Thukral - About</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="index, follow">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="I'm Jagrit Thukral, a versatile Software Developer based in India, specializing in web development, backend programming, and app development.">
-  <title>Jagrit Thukral - About</title>
-  
-
-  <!--
+    <!--
     - favicon
   -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-<link rel="manifest" href="/assets/img/site.webmanifest">
-<link rel="shortcut icon" href="/assets/img/favicon.ico">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
-  <!--
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/site.webmanifest" />
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="/assets/img/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!--
+    <!--
     - google font link
   -->
     <script type="text/javascript">
-  // Check if the current URL is HTTPS and doesn't contain 'www'
-function isHttpsAndNoWww(url) {
-  return url.startsWith('https://') && !url.includes('www.');
-}
-
-// Get the current URL
-const currentUrl = window.location.href;
-
-// Check and set the canonical link tag if the conditions are met
-if (isHttpsAndNoWww(currentUrl)) {
-  const canonicalLink = document.createElement('link');
-  canonicalLink.setAttribute('rel', 'canonical');
-  canonicalLink.setAttribute('href', currentUrl);
-
-  // Add the canonical link tag to the head section of the HTML
-  document.head.appendChild(canonicalLink);
-}
-
-   function updateMetaTags(route) {
-  let title = 'Jagrit Thukral - '
-    let description;
-
-  // Customize title and description based on the route
-  switch (route) {
-    case '/':
-      title += 'About';
-    break;
-      
-    case '/contact':
-      title += 'Contact';
-      description = 'Get in touch with Jagrit thukral. Reach out for inquiries, hiring, collaborations, or any tech-related discussions. ';  
-    break;    
-
-    case '/portfolio':
-      title += 'Portfolio'
-      description = "Explore Jagrit Thukral's diverse portfolio, showcasing expertise in web development, applications, and web design through various engaging projects"
-    break;
-
-    case '/resume':
-      title += 'Resume'
-      description = "Explore Jagrit Thukral's professional journey as a Software Developer, showcasing experience and skills"
-    break;
-
-    case '/blog':
-      title += 'Blog'
-      description = "Explore Jagrit Thukral's blog space, delving into a rich collection of his thoughts, insightful opinions, and reflections on various topics"
-    break;
-  }
-
-  // Update meta tags
-     if (title) {
-  document.title = title;
-     }
-  const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription) {
-    if (description){
-    metaDescription.content = description;
-    }
-  }
-}
-
-// Example: Call the function with the current route
-const currentPath = window.location.pathname.toLowerCase();
-updateMetaTags(currentPath)
-      
-      document.addEventListener("DOMContentLoaded", function() {
-  const navigationLinks = document.querySelectorAll("[data-nav-link]");
-  const pages = document.querySelectorAll("[data-page]");
-  // Loop through navigation links to find the 
-    for (let i = 0; i < pages.length; i++) {
-      const pagePath = `/${pages[i].dataset.page}`;
- 
-
-    if (pagePath !== '/' && currentPath !== '/') {
-      if (currentPath.startsWith(pagePath)) {
-        // Add 'active' class to the selected page
-      //  document.title = `Jagrit Thukral - ${pagePath}`
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-      } else {
-        // Remove 'active' class from other pages
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+      // Check if the current URL is HTTPS and doesn't contain 'www'
+      function isHttpsAndNoWww(url) {
+        return url.startsWith("https://") && !url.includes("www.");
       }
-    } else if (pagePath === '/' && currentPath === '/') {
-      // Handle the home page separately
-      pages[i].classList.add("active");
-      navigationLinks[i].classList.add("active");
-    }
-    }
-  
-});
 
+      // Get the current URL
+      const currentUrl = window.location.href;
+
+      // Check and set the canonical link tag if the conditions are met
+      if (isHttpsAndNoWww(currentUrl)) {
+        const canonicalLink = document.createElement("link");
+        canonicalLink.setAttribute("rel", "canonical");
+        canonicalLink.setAttribute("href", currentUrl);
+
+        // Add the canonical link tag to the head section of the HTML
+        document.head.appendChild(canonicalLink);
+      }
+
+      function updateMetaTags(route) {
+        let title = "Jagrit Thukral - ";
+        let description;
+
+        // Customize title and description based on the route
+        switch (route) {
+          case "/":
+            title += "About";
+            break;
+
+          case "/contact":
+            title += "Contact";
+            description =
+              "Get in touch with Jagrit thukral. Reach out for inquiries, hiring, collaborations, or any tech-related discussions. ";
+            break;
+
+          case "/portfolio":
+            title += "Portfolio";
+            description =
+              "Explore Jagrit Thukral's diverse portfolio, showcasing expertise in web development, applications, and web design through various engaging projects";
+            break;
+
+          case "/resume":
+            title += "Resume";
+            description =
+              "Explore Jagrit Thukral's professional journey as a Software Developer, showcasing experience and skills";
+            break;
+
+          case "/blog":
+            title += "Blog";
+            description =
+              "Explore Jagrit Thukral's blog space, delving into a rich collection of his thoughts, insightful opinions, and reflections on various topics";
+            break;
+        }
+
+        // Update meta tags
+        if (title) {
+          document.title = title;
+        }
+        const metaDescription = document.querySelector(
+          'meta[name="description"]'
+        );
+        if (metaDescription) {
+          if (description) {
+            metaDescription.content = description;
+          }
+        }
+      }
+
+      // Example: Call the function with the current route
+      const currentPath = window.location.pathname.toLowerCase();
+      updateMetaTags(currentPath);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const navigationLinks = document.querySelectorAll("[data-nav-link]");
+        const pages = document.querySelectorAll("[data-page]");
+        // Loop through navigation links to find the
+        for (let i = 0; i < pages.length; i++) {
+          const pagePath = `/${pages[i].dataset.page}`;
+
+          if (pagePath !== "/" && currentPath !== "/") {
+            if (currentPath.startsWith(pagePath)) {
+              // Add 'active' class to the selected page
+              //  document.title = `Jagrit Thukral - ${pagePath}`
+              pages[i].classList.add("active");
+              navigationLinks[i].classList.add("active");
+            } else {
+              // Remove 'active' class from other pages
+              pages[i].classList.remove("active");
+              navigationLinks[i].classList.remove("active");
+            }
+          } else if (pagePath === "/" && currentPath === "/") {
+            // Handle the home page separately
+            pages[i].classList.add("active");
+            navigationLinks[i].classList.add("active");
+          }
+        }
+      });
     </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
-  <!--
+  <body>
+    <!--
     - #MAIN
   -->
 
-  <main>
-
-    <!--
+    <main>
+      <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar animate__animated animate__backInRight" data-sidebar>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/my-avatar.png"
+              alt="Richard hanrick"
+              width="80"
+            />
+          </figure>
 
-      <div class="sidebar-info">
+          <div class="info-content">
+            <h1 class="name" title="Jagrit thukral">Jagrit Thukral</h1>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
+            <p class="title">Software developer</p>
+          </div>
 
-        <div class="info-content">
-          <h1 class="name" title="Jagrit thukral">Jagrit Thukral</h1>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
 
-          <p class="title">Software  developer</p>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
 
-      </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:jagritjtn@gmail.com" class="contact-link">jagritjtn@gmail.com</a>
-            </div>
-
-          </li>
-<!--
+                <a href="mailto:jagritjtn@gmail.com" class="contact-link"
+                  >jagritjtn@gmail.com</a
+                >
+              </div>
+            </li>
+            <!--
           <li class="contact-item">
 
             <div class="icon-box">
@@ -211,328 +233,360 @@ updateMetaTags(currentPath)
 
           </li>
 -->
-          <li class="contact-item">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
 
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
 
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
+                <address>India</address>
+              </div>
+            </li>
+          </ul>
 
-              <address>India</address>
-            </div>
+          <div class="separator"></div>
 
-          </li>
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://github.com/legendary0001" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
 
-        </ul>
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/jagrit-thukral-65234a2a6?trk=contact-info"
+                class="social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
 
-        <div class="separator"></div>
+            <li class="social-item">
+              <a
+                href="https://www.instagram.com/jagritthukral/"
+                class="social-link"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/legendary0001" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/jagrit-thukral-65234a2a6?trk=contact-info" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/jagritthukral/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
+      <!--
       - #main-content
     -->
 
-    <div class="main-content">
-
-      <!--
+      <div class="main-content">
+        <!--
         - #NAVBAR
       -->
-<nav class="navbar">
-  <ul class="navbar-list">
-    <li class="navbar-item">
-      <a rel="can" href="/" class="navbar-link " data-nav-link>About</a>
-    </li>
-    <li class="navbar-item">
-      <a href="/resume" class="navbar-link" data-nav-link>Resume</a>
-    </li>
-    <li class="navbar-item">
-      <a href="/portfolio" class="navbar-link" data-nav-link>Portfolio</a>
-    </li>
-    <li class="navbar-item">
-      <a href="/blog" class="navbar-link" data-nav-link>Blog</a>
-    </li>
-    <li class="navbar-item">
-      <a href="/contact" class="navbar-link" data-nav-link>Contact</a>
-    </li>
-  </ul>
-</nav>
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a rel="can" href="/" class="navbar-link" data-nav-link>About</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/resume" class="navbar-link" data-nav-link>Resume</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/portfolio" class="navbar-link" data-nav-link
+                >Portfolio</a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="/blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/contact" class="navbar-link" data-nav-link>Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-
-
-
-
-      <!--
+        <!--
         - #ABOUT
       -->
 
-      <article class="about " data-page="">
+        <article class="about" data-page="">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
+          <section class="about-text">
+            <p>
+              I'm Jagrit Thukral, a versatile Software Developer based in India,
+              specializing in frontend development, backend programming, and app
+              development I find joy in working on different kinds of projects,
+              continually seeking opportunities to enhance my skills and
+              knowledge in the ever-evolving world of technology.
+            </p>
+          </section>
 
-        <section class="about-text">
-          <p>
-            I'm Jagrit Thukral, a versatile Software Developer based in India, specializing in frontend development, backend programming, and app development
-            I find joy in working on different kinds of projects, continually seeking opportunities to enhance my skills and knowledge in the ever-evolving world of technology.
-          </p>
-
-          
-        </section>
-
-
-        <!--
+          <!--
           - service
         -->
 
-        <section class="service">
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg "
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
 
-          <ul class="service-list">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Frontend</h4>
 
-            <li class="service-item">
+                  <p class="service-item-text">
+                    Transforming given designs into seamless and engaging user
+                    experiences.
+                  </p>
+                </div>
+              </li>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg " alt="design icon" width="40">
-              </div>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Frontend</h4>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Backend development</h4>
 
-                <p class="service-item-text">
-                  Transforming given designs into seamless and engaging user experiences.
-                </p>
-              </div>
+                  <p class="service-item-text">
+                    Bringing robust and efficient backend solutions to life.
+                  </p>
+                </div>
+              </li>
 
-            </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
 
-            <li class="service-item">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Cross-platform apps</h4>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
+                  <p class="service-item-text">
+                    Proficient in developing desktop and mobile apps using
+                    frameworks like Electron, Ionic, and React Native; eager to
+                    expand skills to native development.
+                  </p>
+                </div>
+              </li>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Backend development</h4>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-photo.svg"
+                    alt="camera icon"
+                    width="40"
+                  />
+                </div>
 
-                <p class="service-item-text">
-                 Bringing robust and efficient backend solutions to life.
-                </p>
-              </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Beyond</h4>
 
-            </li>
+                  <p class="service-item-text">
+                    Contact me for inquiries about coding beyond web or app
+                    development projects.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
 
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cross-platform apps</h4>
-
-                <p class="service-item-text">
-                 Proficient in developing desktop and mobile apps using frameworks like Electron, Ionic, and React Native; eager to expand skills to native development.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Beyond</h4>
-
-                <p class="service-item-text">
-                  Contact me for inquiries about coding beyond web or app development projects.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
+          <!--
           - testimonials
         -->
 
-        <section class="testimonials">
+          <section class="testimonials">
+            <h3 class="h3 testimonials-title">Testimonials</h3>
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+            <ul class="testimonials-list has-scrollbar">
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-1.png"
+                      alt="Rishi kubba"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
 
-          <ul class="testimonials-list has-scrollbar">
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Rishi Kubba
+                  </h4>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Rishi kubba" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Rishi Kubba</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    I had the pleasure of working with Jagrit on a project where he handled the backend development and seamlessly integrated it with the front end. Their expertise and dedication were instrumental in ensuring a smooth and efficient system.
-                    Jagrit not only excelled in creating a robust backend structure but also played a crucial role in assisting with the frontend aspects. While not directly involved in the full design of the frontend, his support and guidance were invaluable in enhancing the user experience.
-                    his technical proficiency, problem-solving skills, and collaborative approach made the entire development process a success. I greatly appreciate jagrit's contributions, and I highly recommend his services to anyone seeking a skilled and reliable developer
-                  </p>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      I had the pleasure of working with Jagrit on a project
+                      where he handled the backend development and seamlessly
+                      integrated it with the front end. Their expertise and
+                      dedication were instrumental in ensuring a smooth and
+                      efficient system. Jagrit not only excelled in creating a
+                      robust backend structure but also played a crucial role in
+                      assisting with the frontend aspects. While not directly
+                      involved in the full design of the frontend, his support
+                      and guidance were invaluable in enhancing the user
+                      experience. his technical proficiency, problem-solving
+                      skills, and collaborative approach made the entire
+                      development process a success. I greatly appreciate
+                      jagrit's contributions, and I highly recommend his
+                      services to anyone seeking a skilled and reliable
+                      developer
+                    </p>
+                  </div>
                 </div>
+              </li>
 
-              </div>
-            </li>
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/doraemon-aditya.png"
+                      alt="Aditya sah"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Aditya sah
+                  </h4>
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/doraemon-aditya.png" alt="Aditya sah" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Aditya sah</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Jagrit is an outstanding web developer. Their expertise, attention to detail, and timely delivery surpassed our expectations. Highly recommended for any web development project. I engaged Jagrit to create a contact system and a job application system for our organization. Their dedication and skill set shone brightly in the creation of these systems, delivering a seamless user experience. Moreover, they implemented a comprehensive dashboard that effectively manages incoming applications, streamlining our processes. Jagrit's professionalism and commitment to excellence truly elevate their work
-                  </p>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Jagrit is an outstanding web developer. Their expertise,
+                      attention to detail, and timely delivery surpassed our
+                      expectations. Highly recommended for any web development
+                      project. I engaged Jagrit to create a contact system and a
+                      job application system for our organization. Their
+                      dedication and skill set shone brightly in the creation of
+                      these systems, delivering a seamless user experience.
+                      Moreover, they implemented a comprehensive dashboard that
+                      effectively manages incoming applications, streamlining
+                      our processes. Jagrit's professionalism and commitment to
+                      excellence truly elevate their work
+                    </p>
+                  </div>
                 </div>
+              </li>
+            </ul>
+          </section>
 
-              </div>
-            </li>
-
-        
-
-            
-
-          </ul>
-
-        </section>
-
-
-        <!--
+          <!--
           - testimonials modal
         -->
 
-        <div class="modal-container" data-modal-container>
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
 
-          <div class="overlay" data-overlay></div>
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
 
-          <section class="testimonials-modal">
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Rishi kubba"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
 
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Rishi kubba" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Rishi Kubba</h4>
-
-              <time datetime="2023-10-10">10 octuber 2023 </time>
-
-              <div data-modal-text>
-                <p>
-                 I had the pleasure of working with Jagrit on a project where he handled the backend development and seamlessly integrated it with the front end. Their expertise and dedication were instrumental in ensuring a smooth and efficient system.
-                 Jagrit not only excelled in creating a robust backend structure but also played a crucial role in assisting with the frontend aspects. While not directly involved in the full design of the frontend, his support and guidance were invaluable in enhancing the user experience.
-                 his technical proficiency, problem-solving skills, and collaborative approach made the entire development process a success. I greatly appreciate jagrit's contributions, and I highly recommend his services to anyone seeking a skilled and reliable developer
-                </p>
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
               </div>
 
-            </div>
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Rishi Kubba</h4>
 
-          </section>
+                <time datetime="2023-10-10">10 octuber 2023 </time>
 
-        </div>
+                <div data-modal-text>
+                  <p>
+                    I had the pleasure of working with Jagrit on a project where
+                    he handled the backend development and seamlessly integrated
+                    it with the front end. Their expertise and dedication were
+                    instrumental in ensuring a smooth and efficient system.
+                    Jagrit not only excelled in creating a robust backend
+                    structure but also played a crucial role in assisting with
+                    the frontend aspects. While not directly involved in the
+                    full design of the frontend, his support and guidance were
+                    invaluable in enhancing the user experience. his technical
+                    proficiency, problem-solving skills, and collaborative
+                    approach made the entire development process a success. I
+                    greatly appreciate jagrit's contributions, and I highly
+                    recommend his services to anyone seeking a skilled and
+                    reliable developer
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
 
-
-        <!--
+          <!--
           - clients
         -->
 
-        <section class="clients">
+          <section class="clients">
+            <h3 class="h3 clients-title">Clients</h3>
 
-          <h3 class="h3 clients-title">Clients</h3>
+            <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="https://oratorbot.xyz">
+                  <img
+                    src="./assets/images/orator-logo.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li>
 
-          <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="https://carlost69.sg-host.com">
+                  <img
+                    src="./assets/images/pagtrucking-logo.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-            <li class="clients-item">
-              <a href="https://oratorbot.xyz">
-                <img src="./assets/images/orator-logo.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://carlost69.sg-host.com">
-                <img src="./assets/images/pagtrucking-logo.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-<!--
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+          <!--
         <section class="timeline">
 
           <div class="title-wrapper">
@@ -590,310 +644,292 @@ updateMetaTags(currentPath)
 
         </section>
 -->
-        <section class="timeline">
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <h3 class="h3">Experience</h3>
             </div>
 
-            <h3 class="h3">Experience</h3>
-          </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Freelance frontend developer
+                </h4>
 
-          <ol class="timeline-list">
+                <span>2019 - Present</span>
 
-            <li class="timeline-item">
+                <p class="timeline-text"></p>
+              </li>
 
-              <h4 class="h4 timeline-item-title">Freelance frontend developer</h4>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Freelance backend developer
+                </h4>
 
-              <span>2019 - Present</span>
+                <span>2019 - Present</span>
 
-              <p class="timeline-text">
-                
-              </p>
+                <p class="timeline-text"></p>
+              </li>
 
-            </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Freelance App developer</h4>
 
-            <li class="timeline-item">
+                <span>2022 - Present</span>
 
-              <h4 class="h4 timeline-item-title">Freelance backend developer</h4>
+                <p class="timeline-text"></p>
+              </li>
+            </ol>
+          </section>
 
-              <span>2019 - Present</span>
+          <section class="skill">
+            <h3 class="h3 skills-title">My skills</h3>
 
-              <p class="timeline-text">
-                
-              </p>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Backend</h5>
+                  <data value="90">90%</data>
+                </div>
 
-            </li>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
 
-            <li class="timeline-item">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Frontend</h5>
+                  <data value="70">70%</data>
+                </div>
 
-              <h4 class="h4 timeline-item-title">Freelance App developer</h4>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
+                </div>
+              </li>
 
-              <span>2022 - Present</span>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Designing</h5>
+                  <data value="50">50%</data>
+                </div>
 
-              <p class="timeline-text">
-                
-              </p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 50%"></div>
+                </div>
+              </li>
 
-            </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">WordPress</h5>
+                  <data value="75">75%</data>
+                </div>
 
-          </ol>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Backend</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Frontend</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Designing</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-        <!--
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+              <!--
             <li class="filter-item">
               <button data-filter-btn>Web design</button>
             </li>
           -->
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
+              <li class="filter-item">
+                <button data-filter-btn>Applications</button>
               </li>
-     <!--
+
+              <li class="filter-item">
+                <button data-filter-btn>Web development</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+                <!--
               <li class="select-item">
                 <button data-select-item>Web design</button>
               </li>
      -->
-              <li class="select-item">
-                <button data-select-item>Applications</button>
+                <li class="select-item">
+                  <button data-select-item>Applications</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://carlost69.sg-host.com/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/pagtruck.jpg"
+                      alt="pag trucking"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Pag Trucking</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
               </li>
 
-              <li class="select-item">
-                <button data-select-item>Web development</button>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://oratorbot.xyz">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/orator.png"
+                      alt="orator bot"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Orator bot</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
               </li>
 
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="https://46.4.31.110:4036">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/earphonefinder.png"
+                      alt="earphone finder"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Simple Earphone Finder</h3>
+
+                  <p class="project-category">Web development</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/legendary0001/debloater-app">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/debloater.png"
+                      alt="debloater app"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Debloater app</h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="https://github.com/legendary0001/capacitor-adb">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/capacitoradb.png"
+                      alt="capacitor adb plugin"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Capacitor adb plugin</h3>
+
+                  <p class="project-category">Applications</p>
+                </a>
+              </li>
             </ul>
+          </section>
+        </article>
 
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://carlost69.sg-host.com/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/pagtruck.jpg" alt="pag trucking" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Pag Trucking</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://oratorbot.xyz">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/orator.png" alt="orator bot" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orator bot </h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://46.4.31.110:4036">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/earphonefinder.png" alt="earphone finder" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Simple Earphone Finder </h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://github.com/legendary0001/debloater-app">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/debloater.png" alt="debloater app" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Debloater app</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://github.com/legendary0001/capacitor-adb">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/capacitoradb.png" alt="capacitor adb plugin" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Capacitor adb plugin</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Blog</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-            coming soon
-           <!--
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              coming soon
+              <!--
             <li class="blog-post-item">
               <a href="#">
 
@@ -1062,73 +1098,76 @@ updateMetaTags(currentPath)
               </a>
             </li>
 -->
-          </ul>
+            </ul>
+          </section>
+        </article>
 
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact Me</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Contact Me</h2>
-        </header>
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
 
-        
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
 
-        <section class="contact-form">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
 
-          <h3 class="h3 form-title">Contact Form</h3>
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
 
-          <form action="#" class="form" data-form>
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
+    <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
-  <!--
+    <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
